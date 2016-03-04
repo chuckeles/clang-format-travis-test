@@ -29,4 +29,4 @@ after_success:
   - git commit -m "Format code"
   
   - echo "Pushing changes to Github"
-  - git push "https://${GH_TOKEN}@github.com/chuckeles/clang-format-travis-test.git"
+  - git push "https://${GH_TOKEN}@github.com/chuckeles/clang-format-travis-test.git HEAD:master"
