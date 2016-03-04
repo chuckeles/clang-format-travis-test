@@ -4,3 +4,4 @@ compiler: clang
 script:
   - $CXX hello.cpp
   - ./hello
+  - clang-format -help
