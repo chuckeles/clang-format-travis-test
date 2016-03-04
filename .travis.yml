@@ -1,6 +1,10 @@
 language: cpp
 compiler: clang
 
+env:
+  global:
+    - secure: "IJB2JUbbrQS4dnlgp7dhCf6L6SK4UBIyIo1O7YfMIHXeK9qSqKWo56c1z1UCi3MXVwaBYXT8Sl+xOhuAUcRwq+1sm2mggNvsKZcIZ6KqFGvay8vxc+nIVBEGfR6inw5K0ClOm50X72p65hV50zYV+dqTZ8Smy8aqftBuuEzziPvVNdD6mtQdbYV83bi7i8NqiL7tftXqWTtUGk690OKzYxRB1lRzXvNuqVSuPQMGw6B9ju4WfBzlefE6RABDG1Pv5qcXLR6CGGz0jkcXMgW74fJ2ZlK2WdI2v8/9AqapwGjRixwmzG8EmpeDyjHeDNo+eY80huK6NFHfNXDqmc4oE9FvCDxRIdFDeJtrpofjRx+qGyMJPiNpajqesOuFloiI6yEkZLa7K8lg8XFPvHZwbDV+dp4gwYJIJPTrQYeP/KsMTZVv2y6QhZLdq98AhbABqw9VdcFVuZrSDPY3eGD/XtxSiGIyaNWsqMdLWw9t0cth5J3zt/RIFB4jcSnSrxwUaEuLI3TBU5ijT49aqOZrmXmWnehcG/iN5ufwcwX8HsGaX9JD13BuMuGtKuSirNBTmcpycFp3HBDb1x4R1AMONvFnOt0kZeYwaWiZIm8lHiF/7qVrlNG0htFkiJ7hht9S6Gntm76lKC3Bj9wsXlU5x0MM/GtDWSAtlMpWC9kBfTQ="
+
 script:
   - echo "Current hello.cpp:"
   - cat hello.cpp
@@ -13,3 +17,12 @@ script:
   
   - echo "Running"
   - ./hello
+
+after_success:
+  - echo "Committing changes"
+  
+  - git config user.name "Travis CI"
+  - git config user.email "chuckeles@users.noreply.github.com"
+  
+  - git add --all
+  - git commit -m "Format code"
