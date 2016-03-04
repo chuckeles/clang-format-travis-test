@@ -8,7 +8,7 @@ script:
   - clang-format < hello.cpp
   
   - echo "Building"
-  - $CXX hello.cpp
+  - $CXX -o hello hello.cpp
   
   - echo "Running"
-  - ls
+  - ./hello
