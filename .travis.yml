@@ -23,6 +23,10 @@ after_success:
   
   - git config user.name "Travis CI"
   - git config user.email "chuckeles@users.noreply.github.com"
+  - git config push.default simple
   
   - git add --all
   - git commit -m "Format code"
+  
+  - echo "Pushing changes to Github"
+  - git push "https://${GH_TOKEN}@github.com/chuckeles/clang-format-travis-test.git"
