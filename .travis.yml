@@ -13,10 +13,10 @@ script:
   - cat hello.cpp
   
   - echo "Building"
-  - $CXX -o hello hello.cpp
+  - $CXX -o hello_executable hello.cpp
   
   - echo "Running"
-  - ./hello
+  - ./hello_executable
 
 after_success:
   - echo "Committing changes"
