@@ -1,3 +1,3 @@
-# Clang-format Travis Test
+# Clang-format Travis Test [![Build Status](https://travis-ci.org/chuckeles/clang-format-travis-test.svg?branch=master)](https://travis-ci.org/chuckeles/clang-format-travis-test)
 
 Testing how to use clang-format on Travis. Nothing fancy...
