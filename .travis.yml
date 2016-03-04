@@ -2,6 +2,13 @@ language: cpp
 compiler: clang
 
 script:
+  - echo "Current hello.cpp:"
+  - cat hello.cpp
+  - echo "Formatted hello.cpp:"
+  - clang-format < hello.cpp
+  
+  - echo "Building"
   - $CXX hello.cpp
-  - ./hello
-  - clang-format -help
+  
+  - echo "Running"
+  - ls
