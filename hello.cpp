@@ -1,17 +1,13 @@
 #include <iostream>
- #include  <string>
+#include <string>
 
-int main()
+int main() {
+  std::string name("chuckeles");
 
-{
-    std::string name ( "chuckeles");
-    
-   std::cout << "Hello World" <<     std::endl;
-  
-  
-std::cout << "I am " << name   <<
-"and this code used to be ugly..." << std::endl;
+  std::cout << "Hello World" << std::endl;
 
-return 0;
+  std::cout << "I am " << name << "and this code used to be ugly..."
+            << std::endl;
 
-  }
+  return 0;
+}
