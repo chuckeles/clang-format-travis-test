@@ -5,7 +5,8 @@ script:
   - echo "Current hello.cpp:"
   - cat hello.cpp
   - echo "Formatted hello.cpp:"
-  - clang-format < hello.cpp
+  - clang-format -i hello.cpp
+  - cat hello.cpp
   
   - echo "Building"
   - $CXX -o hello hello.cpp
