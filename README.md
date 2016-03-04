@@ -1,0 +1,3 @@
+# Clang-format Travis Test
+
+Testing how to use clang-format on Travis. Nothing fancy...
